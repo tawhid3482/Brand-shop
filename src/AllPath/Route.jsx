@@ -33,9 +33,9 @@ const Route = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/brandsProduct/:brandName",
+        path: "/brandsProduct/:id",
         element: <BrandProduct></BrandProduct>,
-        loader: () => fetch("http://localhost:5000/products"),
+        loader: () => fetch("/brand.json"),
       },
       {
         path: "/addProduct",
@@ -47,6 +47,12 @@ const Route = createBrowserRouter([
       },
       {
         path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/aboutDetails",
+        element: <AboutDetails></AboutDetails>,
+      },
       {
         path: "/service",
         element: <Service></Service>,
