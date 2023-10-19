@@ -1,6 +1,10 @@
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+ import { AiFillDelete } from 'react-icons/ai';
+ import { BiEditAlt } from 'react-icons/bi';
+ import { FcViewDetails } from 'react-icons/fc';
+
 
 const YourProduct = ({ product }) => {
   const { _id, name, type, price, rating, brand, Description, photo } = product;
@@ -73,14 +77,14 @@ const YourProduct = ({ product }) => {
           </div>
           <div className="card-actions justify-end">
             <div className="btn-group btn-group-vertical space-y-3">
-              <button onClick={() => handleDelete(_id)} className="btn">
-                X
+              <button onClick={() => handleDelete(_id)} className="">
+             <AiFillDelete className="text-3xl"></AiFillDelete>
               </button>
               <Link to={`/update/${_id}`}>
-                <button className="btn">Edit</button>
+                <button className=""><BiEditAlt className="text-3xl"></BiEditAlt></button>
               </Link>
               <Link to={`/details/${_id}`}>
-                <button className="btn ">Details</button>
+                <button className=" "><FcViewDetails className="text-3xl"></FcViewDetails></button>
               </Link>
             </div>
           </div>
