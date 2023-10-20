@@ -16,7 +16,6 @@ console.log(selected)
   const { img1, img2, img3 } = silderdata || {};
 
   const selectedBrand = selected ;
-  // console.log(selectedBrand);
 
   const filteredProducts = products
     ? products.filter((product) => product?.brand === selectedBrand)
