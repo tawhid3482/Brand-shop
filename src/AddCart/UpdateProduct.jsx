@@ -29,7 +29,7 @@ const UpdateProduct = () => {
 
     console.log(updateProduct);
 
-    fetch(`http://localhost:5000/products/${_id}`, {
+    fetch(`https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

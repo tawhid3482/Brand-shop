@@ -3,7 +3,7 @@ const Service = () => {
     return (
         <div>
             <h3 className="text-4xl text-center font-bold m-5">Services</h3>
-            <div className="hero  bg-base-200">
+            <div className="hero">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img src="https://img.freepik.com/premium-photo/male-hand-touching-service-concept_220873-7591.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>

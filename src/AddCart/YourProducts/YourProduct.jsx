@@ -20,7 +20,7 @@ const YourProduct = ({ product }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -35,7 +35,7 @@ const YourProduct = ({ product }) => {
   };
   return (
     <div>
-      <div className="card card-side w-full mg:w-[450px] lg:w-[600px] bg-base-100 shadow-xl">
+      <div className="card card-side w-full mg:w-[450px] lg:w-[600px] bg-gray-600 text-white shadow-xl">
         <figure>
           <img src={photo} className="h-60 md:w-[400px] " alt="Movie" />
         </figure>

@@ -64,7 +64,7 @@ const Route = createBrowserRouter([
             <Details></Details>
           </PrivateProvider>
         ),
-        loader: () => fetch("http://localhost:5000/products"),
+        loader: () => fetch("https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products"),
       },
       {
         path: "/addCart",
@@ -73,12 +73,12 @@ const Route = createBrowserRouter([
             <AddCart></AddCart>
           </PrivateProvider>
         ),
-        loader: () => fetch("http://localhost:5000/products")
+        loader: () => fetch("https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products")
       },
       {
         path:'/update/:id',
         element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        loader:({params})=>fetch(`https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products/${params.id}`)
       }
     ],
   },

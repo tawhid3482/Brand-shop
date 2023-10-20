@@ -23,7 +23,7 @@ const AddProduct = () => {
 
     console.log(newProducts);
 
-    fetch("http://localhost:5000/products",
+    fetch("https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products",
       {
         method: "POST",
         headers: {
