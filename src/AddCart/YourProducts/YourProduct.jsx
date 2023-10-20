@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
  import { AiFillDelete } from 'react-icons/ai';
  import { BiEditAlt } from 'react-icons/bi';
  import { FcViewDetails } from 'react-icons/fc';
-import { useState } from "react";
+// import { useState } from "react";
 
 
 const YourProduct = ({ product }) => {
@@ -24,9 +24,10 @@ const YourProduct = ({ product }) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
+
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/cart/${id}`, {
-          method: "DELETE",
+          method:"DELETE",
         })
           .then((res) => res.json())
           .then((data) => {

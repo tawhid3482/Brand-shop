@@ -6,7 +6,6 @@ const DetailsProducts = ({ productsDetails }) =>
   const {  photo, name, Description } = productsDetails;
 
   const handleAddToCart = () => {
-
     fetch("http://localhost:5000/cart", {
       method: "POST",
       headers: {
