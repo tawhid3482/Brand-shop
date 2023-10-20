@@ -7,7 +7,6 @@ const BrandProduct = ({selected}) => {
 console.log(selected)
   const [products] = FetchHook();
   // console.log(products)
-  // const {_id,name,brand,photo}=products
 
 
   const data = useLoaderData();
