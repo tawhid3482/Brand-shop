@@ -12,9 +12,8 @@ const Banner = () => {
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold text-white">
-               Welcome to the website
             </h1>
-            <p className="mb-5  text-white">Today out best offer day. you can take 50% off any product</p>
+            <p className="mb-5  text-white"></p>
             
           </div>
         </div>
