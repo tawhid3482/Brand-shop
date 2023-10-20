@@ -4,13 +4,17 @@ import Swal from "sweetalert2";
  import { AiFillDelete } from 'react-icons/ai';
  import { BiEditAlt } from 'react-icons/bi';
  import { FcViewDetails } from 'react-icons/fc';
+import { useState } from "react";
 
 
 const YourProduct = ({ product }) => {
-  const navigate = useNavigate()
-  const { _id, name, type, price, rating, brand, Description, photo } = product;
+  const { _id, name, type, price, rating, brand, photo } = product;
 
-  const handleDelete = (_id) => {
+  // const [users,setUsers]= useState(product)
+
+  const navigate = useNavigate()
+
+  const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -21,20 +25,27 @@ const YourProduct = ({ product }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products/${_id}`, {
+        fetch(`http://localhost:5000/cart/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            if (data.deletedCount > 0) {
+            if (data.acknowledged && data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
-              navigate('/addCart')
+              navigate('/addCart');
+            } else {
+              Swal.fire("Error!", "Failed to delete the item.", "error");
             }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            Swal.fire("Error!", "Something went wrong", "error");
           });
       }
     });
   };
+  
   return (
     <div>
       <div className="card card-side w-full mg:w-[450px] lg:w-[600px] bg-gray-600 text-white shadow-xl">

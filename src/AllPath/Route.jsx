@@ -73,12 +73,12 @@ const Route = createBrowserRouter([
             <AddCart></AddCart>
           </PrivateProvider>
         ),
-        loader: () => fetch("https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products")
+        loader: () => fetch("http://localhost:5000/cart")
       },
       {
         path:'/update/:id',
         element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(`https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products/${params.id}`)
+        loader:({params})=>fetch(`http://localhost:5000/cart/${params.id}`)
       }
     ],
   },

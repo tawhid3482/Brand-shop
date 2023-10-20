@@ -17,7 +17,7 @@ console.log(selected)
   const selectedBrand = selected ;
 
   const filteredProducts = products
-    ? products.filter((product) => product?.brand === selectedBrand)
+    ? products.filter((product) => product?.brand !== selectedBrand)
     : [];
 
   return (
