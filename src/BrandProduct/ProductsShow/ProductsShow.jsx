@@ -1,9 +1,8 @@
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
 
-const ProductsShow = ({ product }) => {
-  const { _id, name, type, price, rating, brand, Description, photo } = product;
+const ProductsShow = ({ item }) => {
+  const { _id, name,  price, rating, brand,  photo } = item
 
   return (
     <div>

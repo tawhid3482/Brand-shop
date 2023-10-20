@@ -1,17 +1,22 @@
+
 import ProductsShow from "./ProductsShow/ProductsShow";
 import FetchHook from "../FetchHook/FetchHook";
 import { useLoaderData, useParams } from "react-router-dom";
 
-const BrandProduct = () => {
+const BrandProduct = ({selected}) => {
+console.log(selected)
   const [products] = FetchHook();
-  console.log(products)
+  // console.log(products)
+  // const {_id,name,brand,photo}=products
+
+
   const data = useLoaderData();
   const { id } = useParams();
   const silderdata = data.find((brand) => brand.id == id);
-  const { img1, img2, img3 } = silderdata;
+  const { img1, img2, img3 } = silderdata || {};
 
-  const selectedBrand = {};
-  console.log(selectedBrand);
+  const selectedBrand = selected ;
+  // console.log(selectedBrand);
 
   const filteredProducts = products
     ? products.filter((product) => product?.brand === selectedBrand)
@@ -47,8 +52,8 @@ const BrandProduct = () => {
 
       {/* Display filtered products */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 m-5">
-        {filteredProducts?.map((product) => (
-          <ProductsShow key={product._id} product={product} />
+        {filteredProducts?.map((item) => (
+          <ProductsShow key={item._id} item={item} />
         ))}
       </div>
     </div>

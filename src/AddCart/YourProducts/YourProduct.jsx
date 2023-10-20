@@ -1,5 +1,5 @@
 import Rating from "react-rating";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
  import { AiFillDelete } from 'react-icons/ai';
  import { BiEditAlt } from 'react-icons/bi';
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 
 const YourProduct = ({ product }) => {
+  const navigate = useNavigate()
   const { _id, name, type, price, rating, brand, Description, photo } = product;
 
   const handleDelete = (_id) => {
@@ -28,6 +29,7 @@ const YourProduct = ({ product }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              navigate('/addCart')
             }
           });
       }
@@ -42,6 +44,7 @@ const YourProduct = ({ product }) => {
         <div className="flex justify-around w-full p-2 items-center h-60 ">
           <div className="space-y-2">
             <h2 className="card-title">{name}</h2>
+            <p>{type}</p>
             <p>{brand}</p>
             <p>$ {price}</p>
             <Rating

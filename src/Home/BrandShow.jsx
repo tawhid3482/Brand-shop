@@ -1,28 +1,35 @@
-
-
 import { Link } from "react-router-dom";
 import BrandProduct from "../BrandProduct/BrandProduct";
+import { useState } from "react";
 
 const BrandShow = ({ data }) => {
-  const {id, img, brandName } = data;
-  // const [selectedBrand, setSelectedBrand] = useState(null);
+  const { id, img, brandName } = data;
+  
+  const [selected, setSelectedBrand] = useState(null);
 
-  const handleClick = (brandName, event) => {
-    event.preventDefault();
-    // setSelectedBrand(brandName);
+  const handleClick = () => {
+    setSelectedBrand(brandName);
   };
+
+console.log(selected)
 
   return (
     <div>
       <Link to={`/brandsProduct/${id}`}>
         <div
-          onClick={() => handleClick(brandName)}
+          onClick={handleClick}
           className="flex justify-center gap-3 items-center rounded-3xl border-2 hover:bg-slate-300 h-24"
         >
           <img src={img} className="w-32 h-16" alt="" />
           <p className="text-xl font-medium">{brandName}</p>
         </div>
+      <div className="">
+      {
+          selected && <BrandProduct selected={selected}></BrandProduct>
+        }
+      </div>
       </Link>
+    
     </div>
   );
 };
