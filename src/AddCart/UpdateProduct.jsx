@@ -2,7 +2,9 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 const UpdateProduct = () => {
+
   const products = useLoaderData();
+    
   const navigate = useNavigate();
   const { _id, name, type, price, rating, brand, Description, photo } = products;
 

@@ -13,6 +13,7 @@ import Service from "../Home/Service";
 import Details from "../BrandProduct/Details";
 import AddCart from "../AddCart/AddCart";
 import UpdateProduct from "../AddCart/UpdateProduct";
+import YourProduct from "../AddCart/YourProducts/YourProduct";
 
 const Route = createBrowserRouter([
   {
@@ -73,13 +74,14 @@ const Route = createBrowserRouter([
             <AddCart></AddCart>
           </PrivateProvider>
         ),
-        loader: () => fetch("https://assingment-10-server-site-82wz5fu1n-saikats-projects.vercel.app/cart")
+        loader: () => fetch("http://localhost:5000/cart")
       },
       {
         path:'/update/:id',
         element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(`https://assingment-10-server-site-82wz5fu1n-saikats-projects.vercel.app/cart/${params.id}`)
-      }
+        loader:({params})=>fetch(`http://localhost:5000/cart/${params.id}`)
+      },
+    
     ],
   },
 ]);
