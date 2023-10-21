@@ -28,7 +28,7 @@ const UpdateProduct = () => {
       photo,
     };
 
-    fetch(`http://localhost:5000/cart/${_id}`, {
+    fetch(` https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

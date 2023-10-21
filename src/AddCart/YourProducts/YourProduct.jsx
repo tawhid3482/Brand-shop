@@ -25,7 +25,7 @@ const YourProduct = ({ product }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${_id}`,{
+        fetch(` https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart/${_id}`,{
           method:'DELETE'
         })
           .then((res) => res.json())
@@ -94,7 +94,7 @@ const YourProduct = ({ product }) => {
               <button onClick={() => handleDelete(_id)} className="">
                 <AiFillDelete className="text-3xl"></AiFillDelete>
               </button>
-              
+
               <Link to={`/update/${_id}`}>
                 <button className="">
                   <BiEditAlt className="text-3xl"></BiEditAlt>
