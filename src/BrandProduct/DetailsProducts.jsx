@@ -6,7 +6,7 @@ const DetailsProducts = ({ productsDetails }) =>
   const {  photo, name, Description } = productsDetails;
 
   const handleAddToCart = () => {
-    fetch("http://localhost:5000/cart", {
+    fetch(" https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart", {
       method: "POST",
       headers: {
         "content-type": "application/json"
