@@ -7,7 +7,7 @@ const AddCart = () => {
     
 
     return (
-        <div>
+        <div className="mb-28">
             <h3 className="text-center text-4xl font-bold mb-5">Your Products Cart</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 mb-5 gap-5">
                 {
