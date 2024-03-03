@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CustomFetch from "../CustomFetch/CustomFetch";
-import BrandShow from "./BrandShow";
 const Brands = () => {
   const [service] = CustomFetch();
 

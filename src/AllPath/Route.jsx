@@ -13,8 +13,7 @@ import Service from "../Home/Service";
 import Details from "../BrandProduct/Details";
 import AddCart from "../AddCart/AddCart";
 import UpdateProduct from "../AddCart/UpdateProduct";
-import Products from "../Components/Products";
-
+import Products from "../Product/Products";
 const Route = createBrowserRouter([
   {
     path: "/",
@@ -91,11 +90,16 @@ const Route = createBrowserRouter([
             ` https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart/${params.id}`
           ),
       },
+      // {
+      //   path: "/products",
+      //   element: <Products></Products>,
+      //   loader: () => fetch("/products.json"),
+      // },
       {
-        path: "/products",
-        element: <Products></Products>,
-        loader: () => fetch("/products.json"),
-      },
+        path:'/products/:name',
+        element:<Products></Products>,
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.name}`)
+      }
     ],
   },
 ]);
