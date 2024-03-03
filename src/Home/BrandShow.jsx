@@ -1,35 +1,29 @@
 import { Link } from "react-router-dom";
-import BrandProduct from "../BrandProduct/BrandProduct";
-import { useState } from "react";
 
-const BrandShow = ({ data }) => {
-  const { id, img, brandName } = data;
-  
-  const [selected, setSelectedBrand] = useState(null);
+const BrandShow = ({ item }) => {
 
-  const handleClick = () => {
-    setSelectedBrand(brandName);
-  };
+  const { id, img, brandName } = item;
 
-console.log(selected)
+  // const [selectedBrand, setSelectedBrand] = useState(null);
+
+  // const handleClick = () => {
+  //   setSelectedBrand(item); // Store the entire brand object in the state
+  // };
 
   return (
     <div>
       <Link to={`/brandsProduct/${id}`}>
         <div
-          onClick={handleClick}
+         
           className="flex justify-center gap-3 items-center rounded-3xl border-2 hover:bg-slate-300 h-24"
         >
           <img src={img} className="w-32 h-16" alt="" />
           <p className="text-xl font-medium">{brandName}</p>
         </div>
-      <div className="">
-      {
-          selected && <BrandProduct selected={selected}></BrandProduct>
-        }
-      </div>
       </Link>
-    
+      {/* <div className="">
+        {selectedBrand && <BrandProduct selected={selectedBrand} item={item} />}
+      </div> */}
     </div>
   );
 };
@@ -43,15 +37,11 @@ export default BrandShow;
 
 
 
-
-
-
-
 // import  { useState } from "react";
 // import { Link } from "react-router-dom";
 // import BrandProduct from "../BrandProduct/BrandProduct";
 
-// const BrandShow = ({ data }) => {
+// const BrandShow = ({ item }) => {
 //   const { img, brandName } = data;
 //   const [selectedBrand, setSelectedBrand] = useState(brandName);
 

@@ -2,14 +2,17 @@
 import ProductsShow from "./ProductsShow/ProductsShow";
 import FetchHook from "../FetchHook/FetchHook";
 import { useLoaderData, useParams } from "react-router-dom";
+import CustomFetch from "../CustomFetch/CustomFetch";
 
 const BrandProduct = ({selected}) => {
-console.log(selected)
-  const [products] = FetchHook();
-  // console.log(products)
 
+  const [products] = FetchHook();
+
+  const [service] = CustomFetch()
+  console.log(service)
 
   const data = useLoaderData();
+
   const { id } = useParams();
   const silderdata = data.find((brand) => brand.id == id);
   const { img1, img2, img3 } = silderdata || {};

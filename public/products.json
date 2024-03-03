@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "1",
+        "name": "Smartphone",
+        "category": "Electronics",
+        "price": 500,
+        "brand": "Samsung"
+    },
+    {
+        "_id": "2",
+        "name": "Laptop",
+        "category": "Electronics",
+        "price": 800,
+        "brand": "Dell"
+    },
+    {
+        "_id": "3",
+        "name": "T-shirt",
+        "category": "Clothing",
+        "price": 20,
+        "brand": "Nike"
+    },
+    {
+        "_id": "4",
+        "name": "Jeans",
+        "category": "Clothing",
+        "price": 40,
+        "brand": "Levi's"
+    },
+    {
+        "_id": "5",
+        "name": "Refrigerator",
+        "category": "Home Appliances",
+        "price": 600,
+        "brand": "LG"
+    },
+    {
+        "_id": "6",
+        "name": "Microwave Oven",
+        "category": "Home Appliances",
+        "price": 150,
+        "brand": "Panasonic"
+    },
+    {
+        "_id": "7",
+        "name": "Soccer Ball",
+        "category": "Sports Equipment",
+        "price": 30,
+        "brand": "Adidas"
+    },
+    {
+        "_id": "8",
+        "name": "Tennis Racket",
+        "category": "Sports Equipment",
+        "price": 50,
+        "brand": "Wilson"
+    },
+    {
+        "_id": "9",
+        "name": "Headphones",
+        "category": "Electronics",
+        "price": 100,
+        "brand": "Sony"
+    },
+    {
+        "_id": "10",
+        "name": "Jacket",
+        "category": "Clothing",
+        "price": 60,
+        "brand": "The North Face"
+    }
+]

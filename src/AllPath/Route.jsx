@@ -13,6 +13,7 @@ import Service from "../Home/Service";
 import Details from "../BrandProduct/Details";
 import AddCart from "../AddCart/AddCart";
 import UpdateProduct from "../AddCart/UpdateProduct";
+import Products from "../Components/Products";
 
 const Route = createBrowserRouter([
   {
@@ -35,8 +36,9 @@ const Route = createBrowserRouter([
       {
         path: "/brandsProduct/:id",
         element: <BrandProduct></BrandProduct>,
-        loader: () => fetch("/brand.json"),
+        loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`),
       },
+
       {
         path: "/addProduct",
         element: (
@@ -64,7 +66,10 @@ const Route = createBrowserRouter([
             <Details></Details>
           </PrivateProvider>
         ),
-        loader: () => fetch("https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products"),
+        loader: () =>
+          fetch(
+            "https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products"
+          ),
       },
       {
         path: "/addCart",
@@ -73,14 +78,24 @@ const Route = createBrowserRouter([
             <AddCart></AddCart>
           </PrivateProvider>
         ),
-        loader: () => fetch(" https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart")
+        loader: () =>
+          fetch(
+            " https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart"
+          ),
       },
       {
-        path:'/update/:id',
-        element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(` https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart/${params.id}`)
+        path: "/update/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({ params }) =>
+          fetch(
+            ` https://assingment-10-server-site-odrcc285o-saikats-projects.vercel.app/cart/${params.id}`
+          ),
       },
-    
+      {
+        path: "/products",
+        element: <Products></Products>,
+        loader: () => fetch("/products.json"),
+      },
     ],
   },
 ]);

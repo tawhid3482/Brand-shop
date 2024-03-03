@@ -7,4 +7,4 @@ const UseHook = () => {
     return all
 };
 
-export default UseHook;
+export default UseHook
