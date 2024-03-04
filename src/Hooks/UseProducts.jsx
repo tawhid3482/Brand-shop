@@ -4,7 +4,7 @@ const UseProducts = () => {
   const [pro, setPro] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("/doctors.json")
+    fetch("/products.json")
       .then((res) => res.json())
       .then((data) => {
         setPro(data);

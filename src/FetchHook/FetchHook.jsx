@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 const FetchHook = () => {
     const [products, setProducts]=useState()
+    // console.log(products)
     useEffect(()=>{
-      fetch('https://assingment-10-server-site-6z7rmnwc8-saikats-projects.vercel.app/products')
+      fetch('/brand.json')
 
       .then(res => res.json())
       .then(data => setProducts(data))

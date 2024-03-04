@@ -14,6 +14,10 @@ import Details from "../BrandProduct/Details";
 import AddCart from "../AddCart/AddCart";
 import UpdateProduct from "../AddCart/UpdateProduct";
 import Products from "../Product/Products";
+import ProductsFilter from "../Product/productsFilter";
+import Amni from "../Product/Amni";
+import Brands from "../Practice/Brands/Brands";
+import PcProducts from "../Practice/PcProducts";
 const Route = createBrowserRouter([
   {
     path: "/",
@@ -95,10 +99,23 @@ const Route = createBrowserRouter([
       //   element: <Products></Products>,
       //   loader: () => fetch("http://localhost:5000/products"),
       // },
+      // {
+      //   path: "/products",
+      //   element: <Amni></Amni>,
+      //   loader: () => fetch("http://localhost:5000/brand"),
+      // },
+      // {
+      //   path:'/products/:brand ',
+      //   element:<Products></Products>,
+      //   loader:({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
+      // }
       {
-        path:'/products/:brand',
-        element:<Products></Products>,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
+        path:'/brands',
+        element:<Brands></Brands>
+      },
+      {
+        path:'/product',
+        element:<PcProducts></PcProducts>
       }
     ],
   },

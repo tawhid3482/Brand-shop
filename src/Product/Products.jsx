@@ -1,9 +1,8 @@
 import Rating from "react-rating";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 const Products = ({ products }) => {
-  // const data = useLoaderData();
-  // console.log(data);
+  // console.log(products);
 
   return (
     <div>

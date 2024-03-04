@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import UseProducts from "../Hooks/UseProducts";
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import Products from "./Products";
 
-const ProductsFilter = () => {
+const ProductsFilter = ({prod}) => {
+
   const [pro] = UseProducts();
+  // console.log(pro)
   const [products, setProduct] = useState(null);
-  const { brandName } = useParams();
+  // const { brandName } = useParams();
+  // const data = useLoaderData();
+  // console.log(data.id)
+// const {id}= useParams()
+    // console.log(prod.brandName)
+    const {brandName}=prod
 
   useEffect(() => {
     const fetchProducts = async () => {
