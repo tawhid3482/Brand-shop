@@ -93,12 +93,12 @@ const Route = createBrowserRouter([
       // {
       //   path: "/products",
       //   element: <Products></Products>,
-      //   loader: () => fetch("/products.json"),
+      //   loader: () => fetch("http://localhost:5000/products"),
       // },
       {
-        path:'/products/:name',
+        path:'/products/:brand',
         element:<Products></Products>,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.name}`)
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
       }
     ],
   },
