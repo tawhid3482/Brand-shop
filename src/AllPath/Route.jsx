@@ -114,8 +114,9 @@ const Route = createBrowserRouter([
         element:<Brands></Brands>
       },
       {
-        path:'/product',
-        element:<PcProducts></PcProducts>
+        path:'/bands/:brand',
+        element:<PcProducts></PcProducts>,
+        loader: ({params}) => fetch(`https://my-assignment-10-server-moga0irbs-kazirauf.vercel.app/brands/${params.brand}`)
       }
     ],
   },
