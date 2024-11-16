@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "6531fda5ac679800e51d9234",
+    "name": "Samsung phone S20",
+    "type": "phone",
+    "price": "15000",
+    "rating": "4.75",
+    "brand": "samsung",
+    "Description": "it a smart phone",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnhmqPhQ8V01BQG9Q-HuzUVQhYt09CeaUfEqSxI5ReeC37mDYLxdoeyjgYWgc92wVpR3A&usqp=CAU"
+  },
+  {
+    "_id": "653241d6aaf5844044815c24",
+    "name": "Mac book ",
+    "type": "Loptop",
+    "price": "15000",
+    "rating": "4.75",
+    "brand": "apple",
+    "Description": "it a smartl laptop",
+    "photo": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202211/macbook-sixteen_nine.jpg?VersionId=EjGEHb3LirHTwKZazyBSSd5GS0j4QHzv"
+  }
+]
